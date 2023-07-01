@@ -1,0 +1,19 @@
+management:
+        
+  endpoints:
+    web:
+      exposure:
+        include: health
+        
+  endpoint:
+    health:
+      show-details: always
+
+
+
+resilience4j:
+  retry:
+    instances:
+      m1:
+        max-attempts: 5
+        wait-duration: 10s
